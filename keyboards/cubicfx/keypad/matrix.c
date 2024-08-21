@@ -19,7 +19,7 @@ static uint16_t pressedAdcValue                = 0;
 static uint16_t restAdcValue                   = 0;
 
 void matrix_init_custom(void) {
-    generate_lut();
+    // generate_lut();
     pressedAdcValue = distance_to_adc(255);
     restAdcValue    = distance_to_adc(0);
     multiplexer_init();
@@ -43,7 +43,7 @@ bool matrix_scan_custom(matrix_row_t current_matrix[]) {
 
             analog_key_t *key = &keys[mux_idx->row][mux_idx->col];
             key->raw          = analogReadPin(mux_pins[mux]);
-            key->value        = lut[key->raw + key->offset];
+            key->value        = adc_to_distance(key->raw + key->offset);
 
             switch (g_config.mode) {
                 case dynamic_actuation:

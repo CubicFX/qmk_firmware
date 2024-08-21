@@ -2,8 +2,7 @@
   "manufacturer": "CubicFX",
   "keyboard_name": "keypad",
   "maintainer": "CubicFX",
-  "processor": "atmega32u4",
-  "bootloader": "atmel-dfu",
+  "development_board": "elite_c",
   "features": {
     "bootmagic": true,
     "mousekey": false,

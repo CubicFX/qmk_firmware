@@ -30,10 +30,10 @@ uint8_t adc_to_distance(uint16_t adc) {
     return distance;
 }
 
-uint8_t lut[ADC_RESOLUTION_MAX] = {0};
+// uint8_t lut[ADC_RESOLUTION_MAX] = {0};
 
-void generate_lut(void) {
-    for (uint16_t i = 0; i < ADC_RESOLUTION_MAX; i++) {
-        lut[i] = adc_to_distance(i);
-    }
-}
+// void generate_lut(void) {
+//     for (uint16_t i = 0; i < ADC_RESOLUTION_MAX; i++) {
+//         lut[i] = adc_to_distance(i);
+//     }
+// }
