@@ -1,7 +1,7 @@
 # cubixfx/keypad
 ![cubicfx/keypad]()
 
-*An analog split keypad intended*
+*An analog split keypad*
 
 * Keyboard Maintainer: [CubicFX](https://github.com/CubicFX)
 * Hardware Supported: *ATmega32u4*
