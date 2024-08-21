@@ -1,19 +1,19 @@
-# rephlex/keypad
-![Rephlex/2k]()
+# cubixfx/keypad
+![cubicfx/keypad]()
 
-*An analog 75% keyboard intended for Osu! with dynamic actuation point, VIA, OLED and RGB*
+*An analog split keypad intended*
 
-* Keyboard Maintainer: [Jake Stewart](https://github.com/CubicFX)
-* Hardware Supported: *STM32F446*
+* Keyboard Maintainer: [CubicFX](https://github.com/CubicFX)
+* Hardware Supported: *ATmega32u4*
 * Hardware Availability: *NULL*
 
 Make example for this keyboard (after setting up your build environment):
 
-    make rephlex/keypad:default
+    make cubicfx/keypad:default
 
 Flashing example for this keyboard:
 
-    make rephlex/keypad:default:flash
+    make cubicfx/keypad:default:flash
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and
 the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start
