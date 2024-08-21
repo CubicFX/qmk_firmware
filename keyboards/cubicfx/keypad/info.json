@@ -1,7 +1,7 @@
 {
-  "manufacturer": "RephlexZero",
-  "keyboard_name": "Moonboard",
-  "maintainer": "RephlexZero",
+  "manufacturer": "CubicFX",
+  "keyboard_name": "keypad",
+  "maintainer": "CubicFX",
   "processor": "atmega32u4",
   "bootloader": "atmel-dfu",
   "features": {
@@ -13,11 +13,6 @@
     "command": false,
     "nkro": true,
     "deferred_exec": true
-  },
-  "encoder": {
-    "rotary": [
-      {"pin_a": "A0", "pin_b": "A1", "resolution": 2}
-    ]
   },
   "qmk": {
     "tap_keycode_delay": 10

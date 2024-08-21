@@ -1,9 +1,9 @@
-/* Copyright 2023 RephlexZero (@RephlexZero)
+/* Copyright 2023 CubicFX (@CubicFX)
 SPDX-License-Identifier: GPL-2.0-or-later */
 #include <stdint.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include "moonboard.h"
+#include "keypad.h"
 #include "quantum.h"
 #include "eeprom.h"
 #include "scanfunctions.h"
@@ -21,7 +21,7 @@ void bootmagic_scan(void) {
     uint16_t raw_value = keys[BOOTMAGIC_ROW][BOOTMAGIC_COLUMN].raw;
 
     if (((lut_b > 0) & (raw_value > threshold)) | ((lut_b < 0) & (raw_value < threshold))) {
-        bootloader_jump();
+        // bootloader_jump();
     }
 }
 #endif

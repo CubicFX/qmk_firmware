@@ -1,4 +1,4 @@
-/* Copyright 2023 RephlexZero (@RephlexZero)
+/* Copyright 2023 CubicFX (@CubicFX)
 SPDX-License-Identifier: GPL-2.0-or-later */
 #include <stdint.h>
 #include <stdbool.h>

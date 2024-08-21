@@ -1,19 +1,19 @@
-# rephlex/moonboard
+# rephlex/keypad
 ![Rephlex/2k]()
 
 *An analog 75% keyboard intended for Osu! with dynamic actuation point, VIA, OLED and RGB*
 
-* Keyboard Maintainer: [Jake Stewart](https://github.com/RephlexZero)
+* Keyboard Maintainer: [Jake Stewart](https://github.com/CubicFX)
 * Hardware Supported: *STM32F446*
 * Hardware Availability: *NULL*
 
 Make example for this keyboard (after setting up your build environment):
 
-    make rephlex/moonboard:default
+    make rephlex/keypad:default
 
 Flashing example for this keyboard:
 
-    make rephlex/moonboard:default:flash
+    make rephlex/keypad:default:flash
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and
 the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start
