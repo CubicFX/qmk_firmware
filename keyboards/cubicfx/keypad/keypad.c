@@ -40,7 +40,7 @@ bool debug_print(void) {
     for (uint8_t col = 0; col < MATRIX_COLS; col++) {
         analog_key_t *key = &keys[currentRow][col];
         if (key->raw) {
-            bufferPtr += snprintf(bufferPtr, sizeof(rowBuffer) - (bufferPtr - rowBuffer), "%5u  ", key->raw);
+            bufferPtr += snprintf(bufferPtr, sizeof(rowBuffer) - (bufferPtr - rowBuffer), "%5u  ", key->value);
         } else {
             bufferPtr += snprintf(bufferPtr, sizeof(rowBuffer) - (bufferPtr - rowBuffer), " null   ");
         }
