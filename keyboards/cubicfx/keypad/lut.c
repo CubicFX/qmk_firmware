@@ -15,10 +15,10 @@ SPDX-License-Identifier: GPL-2.0-or-later */
 // const double lut_c = 6.01110636956;
 // const double lut_d = 1966.74076381;
 
- const double lut_a = 0.095; // Cubic
- const double lut_b = 0.01;
- const double lut_c = 0;
- const double lut_d = 350;
+ const double lut_a = -0.0245757915451; // Cubic
+ const double lut_b = 0.0110907899281;
+ const double lut_c = 5.9088903529;
+ const double lut_d = 347.913976103;
 
 uint16_t distance_to_adc(uint8_t distance) {
     double intermediate = lut_a * exp(lut_b * distance + lut_c) + lut_d;
