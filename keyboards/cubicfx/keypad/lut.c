@@ -15,10 +15,15 @@ SPDX-License-Identifier: GPL-2.0-or-later */
 // const double lut_c = 6.01110636956;
 // const double lut_d = 1966.74076381;
 
- const double lut_a = -0.0245757915451; // Cubic
- const double lut_b = 0.0110907899281;
- const double lut_c = 5.9088903529;
- const double lut_d = 347.913976103;
+//  const double lut_a = -0.0245757915451; // Cubic Lekker L45
+//  const double lut_b = 0.0110907899281;
+//  const double lut_c = 5.9088903529;
+//  const double lut_d = 347.913976103;
+
+ const double lut_a = 0.879838688261; // Cubic Gateron Double-Rail Magnetic - Aurora
+ const double lut_b = 0.00663382091914;
+ const double lut_c = 2.9113558737;
+ const double lut_d = 347.719500597;
 
 uint16_t distance_to_adc(uint8_t distance) {
     double intermediate = lut_a * exp(lut_b * distance + lut_c) + lut_d;
@@ -27,10 +32,11 @@ uint16_t distance_to_adc(uint8_t distance) {
 }
 
 uint8_t adc_to_distance(uint16_t adc) {
-    if (adc <= lut_d) {
+    double check = (adc - lut_d) / lut_a;
+    if (check <= 0) {
         return 0;
     }
-    double intermediate = (log((adc - lut_d) / lut_a) - lut_c) / lut_b;
+    double intermediate = (log(check) - lut_c) / lut_b;
     uint8_t distance = (uint8_t) MAX(0, MIN(intermediate, 255));
     return distance;
 }

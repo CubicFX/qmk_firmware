@@ -11,7 +11,7 @@ SPDX-License-Identifier: GPL-2.0-or-later */
 #include "multiplexer.h"
 #include "lut.h"
 
-analog_config g_config = {.mode = static_actuation, .actuation_point = 48, .press_sensitivity = 32, .release_sensitivity = 32, .press_hysteresis = 0, .release_hysteresis = 5};
+analog_config g_config = {.mode = continuous_dynamic_actuation, .actuation_point = 48, .press_sensitivity = 32, .release_sensitivity = 32, .press_hysteresis = 0, .release_hysteresis = 5};
 
 #ifdef BOOTMAGIC_ENABLE
 void bootmagic_scan(void) {
@@ -40,7 +40,7 @@ bool debug_print(void) {
     for (uint8_t col = 0; col < MATRIX_COLS; col++) {
         analog_key_t *key = &keys[currentRow][col];
         if (key->raw) {
-            bufferPtr += snprintf(bufferPtr, sizeof(rowBuffer) - (bufferPtr - rowBuffer), "%5u  ", key->value);
+            bufferPtr += snprintf(bufferPtr, sizeof(rowBuffer) - (bufferPtr - rowBuffer), "%5d  ", key->value);
         } else {
             bufferPtr += snprintf(bufferPtr, sizeof(rowBuffer) - (bufferPtr - rowBuffer), " null   ");
         }
