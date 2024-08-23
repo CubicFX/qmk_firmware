@@ -11,7 +11,7 @@ SPDX-License-Identifier: GPL-2.0-or-later */
 #include "multiplexer.h"
 #include "lut.h"
 
-analog_config g_config = {.mode = continuous_dynamic_actuation, .actuation_point = 48, .press_sensitivity = 32, .release_sensitivity = 32, .press_hysteresis = 0, .release_hysteresis = 5};
+analog_config g_config = {.mode = 2, .actuation_point = 35, .press_sensitivity = 10, .release_sensitivity = 10, .press_hysteresis = 1, .release_hysteresis = 5};
 
 #ifdef BOOTMAGIC_ENABLE
 void bootmagic_scan(void) {

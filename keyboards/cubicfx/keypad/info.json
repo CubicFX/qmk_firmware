@@ -1,6 +1,6 @@
 {
   "manufacturer": "CubicFX",
-  "keyboard_name": "keypad",
+  "keyboard_name": "CubicKeypad",
   "maintainer": "CubicFX",
   "development_board": "elite_c",
   "features": {
