@@ -5,4 +5,6 @@ CUSTOM_MATRIX = lite
 
 ANALOG_DRIVER_REQUIRED = yes
 
-# OPT = 1
+VIA_ENABLE = yes
+
+OPT = 3

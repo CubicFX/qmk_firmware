@@ -2,7 +2,7 @@
   "manufacturer": "CubicFX",
   "keyboard_name": "CubicKeypad",
   "maintainer": "CubicFX",
-  "development_board": "elite_c",
+  "development_board": "elite_pi",
   "features": {
     "bootmagic": true,
     "mousekey": false,
@@ -22,8 +22,8 @@
   },
   "usb": {
     "device_version": "1.0.0",
-    "pid": "0x1969",
-    "vid": "0x4D4F"
+    "pid": "0x4B50",
+    "vid": "0x4346"
   },
   "layouts": {
     "LAYOUT_iso": {

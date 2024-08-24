@@ -20,10 +20,15 @@ SPDX-License-Identifier: GPL-2.0-or-later */
 //  const double lut_c = 5.9088903529;
 //  const double lut_d = 347.913976103;
 
- const double lut_a = 0.879838688261; // Cubic Gateron Double-Rail Magnetic - Aurora
- const double lut_b = 0.00663382091914;
- const double lut_c = 2.9113558737;
- const double lut_d = 347.719500597;
+//  const double lut_a = 0.879838688261; // Cubic Gateron Double-Rail Magnetic - Aurora - ATmega32u4
+//  const double lut_b = 0.00663382091914;
+//  const double lut_c = 2.9113558737;
+//  const double lut_d = 347.719500597;
+
+ const double lut_a = 4.31864487978; // Cubic Gateron Double-Rail Magnetic - Aurora - RP2040
+ const double lut_b = 0.00751447799644;
+ const double lut_c = 2.79457208507;
+ const double lut_d = 2121.01448264;
 
 uint16_t distance_to_adc(uint8_t distance) {
     double intermediate = lut_a * exp(lut_b * distance + lut_c) + lut_d;
@@ -41,10 +46,10 @@ uint8_t adc_to_distance(uint16_t adc) {
     return distance;
 }
 
-// uint8_t lut[ADC_RESOLUTION_MAX] = {0};
+uint8_t lut[ADC_RESOLUTION_MAX] = {0};
 
-// void generate_lut(void) {
-//     for (uint16_t i = 0; i < ADC_RESOLUTION_MAX; i++) {
-//         lut[i] = adc_to_distance(i);
-//     }
-// }
+void generate_lut(void) {
+    for (uint16_t i = 0; i < ADC_RESOLUTION_MAX; i++) {
+        lut[i] = adc_to_distance(i);
+    }
+}
